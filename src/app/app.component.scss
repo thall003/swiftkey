@@ -1,0 +1,79 @@
+@import '../sass/global';
+@import '../sass/helpers/functions';
+@import '../sass/grid';
+@import '../sass/settings';
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+:host {
+  @include grid-block(
+    $size: expand, // Can be expand, shrink, or a number of columns
+    $orientation: horizontal, // Set to vertical for a vertical grid
+    $wrap: false, // Set to true to make columns wrap if they get too wide
+    $align: left, // Can be left, right, center, justify, or spaced
+    $order: 0 // Can be any positive number
+  );
+  background: $gray-light;
+
+
+}
+
+.custom-frame {
+  // Orientation can be horizontal or vertical
+  // @include grid-frame($orientation: horizontal);
+
+}
+
+.button.expand {
+  display: block;
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: flex-end;
+}
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.main-content-card {
+  width: 800px;
+  height: 700px;
+  overflow-y: scroll;
+}
+.note-card {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: auto;
+}
+.total-card {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: auto;
+
+}
+mat-card{
+  width: 400px;
+  border: 1px solid black;
+}
+
+mat-raised-button {
+  align-items: flex-end;
+}
+image__card {
+  width: auto;
+}
+
+
+.content-card {
+  background: $white;
+  margin: rem-calc(16px);
+  padding-top: rem-calc(16px);
+  padding-bottom: rem-calc(16px);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.order-page-container {
+  @include grid-frame($orientation: vertical);
+}
+mat-sidenav-container {
+  width: 100%;
+}

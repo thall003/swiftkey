@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+@import "./mixins";
+@import "./helpers/functions";
+@import "./settings";
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+@include mat-core();
+
+$swift-key-primary: mat-palette($mat-green, 700);
+$swift-key-accent: mat-palette($mat-orange, 100);
+$swift-key-theme: mat-light-theme($swift-key-primary, $swift-key-accent);
+
+@include angular-material-theme($swift-key-theme);
+// This sets 1rem to be 16px
+$rem-base: 16px;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+$base-font-size: 100% !default;
+
+// $base-line-height is 24px while $base-font-size is 16px
+$base-line-height: 1.5 !default;
+
+// Text selector helpers
+$headers: "h1,h2,h3,h4,h5,h6";
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+// We use these to control various global styles
+$white: #fff;
+$body-background: $white !default;
+$body-font-color: #222 !default;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-weight: $font-weight-normal !default;
+$body-font-style: normal !default;
+$body-antialiased: true;
+
+// Different Color Palettes
+
+// VA Beach
+
+$cerulean: #0081AF;
+$vivid_cerulean: #00ABE7;
+$spiro_disco_ball: #2DC7FF;
+$desert_sand: #EAD2AC;
+$middle_yellow_red: #EABA6B;
+
+// Richmond
+$spicy_mix: #885053;
+$sunset_orange: #FE5F55;
+$shadow_blue: #777DA7;
+$eton_blue: #94C9A9;
+$tea_green: #C6ECAE;
+
+// Random Hues
+
+$eerie_black: #11151C;
+$deep_green_cyan_turquoise: #136F63;
+$star_command_blue: #0E79B2;
+$vivid_orange: #F45D01;
+$japanese_indigo: #264348;
+
+// Application Colors
+$primary-color: $cerulean !default;
+$secondary-color: $middle_yellow_red !default;
+$alert-color: $sunset_orange !default;
+$info-color: $star_command_blue !default;
+$success-color: $deep_green_cyan_turquoise !default;
+$warning-color: $vivid_orange !default;
+$dark-color: #232323 !default;
+$gray: #dfdfdf !default;
+$gray-dark: darken($gray, 8) !default;
+$gray-light: lighten($gray, 8) !default;
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 4px !default;
+$global-rounded: 1000px !default;
+
+// We use this for default spacing
+$global-padding: 1rem !default;
+$global-spacing: rem-calc(15) !default;
+///
+
+// For internal use: a color map
+$swift-key-colors: (
+  primary: $primary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+  dark: $dark-color
+);
+
