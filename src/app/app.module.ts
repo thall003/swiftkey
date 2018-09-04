@@ -20,6 +20,8 @@ import {
 import { CodeLabComponent } from './code-lab/code-lab.component';
 import { HomeComponent } from './home/home.component';
 import { WorkComponent } from './work/work.component';
+import { SocialComponent } from './social/social.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { WorkComponent } from './work/work.component';
     PortfolioComponent,
     CodeLabComponent,
     HomeComponent,
-    WorkComponent
+    WorkComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

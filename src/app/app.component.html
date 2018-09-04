@@ -37,7 +37,10 @@
           <nav mat-button mat-menu-item [routerLink]="['/portfolio']" (click)= "changeValue(false)">
             <span>Portfolio</span>
           </nav>
-          <nav mat-button mat-menu-item [routerLink]="['/work']" (click)= "changeValue(false)">
+          <nav mat-button mat-menu-item [routerLink]="['/labs']" (click)= "changeValue(true)">
+            <span>Code Lab</span>
+          </nav>
+          <nav mat-button mat-menu-item [routerLink]="['/work']" (click)= "changeValue(true)">
             <span>Work</span>
           </nav>
           <nav mat-button mat-menu-item [routerLink]="['/contact']" (click)= "changeValue(true)">
